@@ -36,6 +36,9 @@ def medians_of_two_sortedarray(arr1, arr2):
         median = sorted_arr[len_arr-1/2]
     print(median)
     return median
+
+
+
 if __name__ == '__main__':
     #test cases for power 10
     TEST1 = is_power_of_10(100)
