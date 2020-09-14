@@ -37,8 +37,22 @@ def medians_of_two_sortedarray(arr1, arr2):
     print(median)
     return median
 
-
-
+def number_of_steps_to_reduce_number_o(input_num):
+    '''
+    how mamny steps required for a number to reduce it 0
+    if even - devide by 2,
+    if odd - minus 1
+    '''
+    counter = 0
+    print(input_num)
+    while input_num > 0:
+        if input_num % 2 == 0:
+            input_num = input_num/2
+        else:
+            input_num = input_num - 1
+        counter = counter+ 1
+    print(counter)
+    return counter
 if __name__ == '__main__':
     #test cases for power 10
     TEST1 = is_power_of_10(100)
@@ -64,3 +78,12 @@ if __name__ == '__main__':
         print("test cases passed for median")
     else:
         print("test cases failed for median")
+    #test cases for number to reduce it 0
+    TEST1 = number_of_steps_to_reduce_number_o(14)
+    TEST2 = number_of_steps_to_reduce_number_o(8)
+    TEST3 = number_of_steps_to_reduce_number_o(123)
+    if TEST1 == 6 and TEST2 == 4 and TEST3 == 12:
+        print("test cases passed for steps to 0")
+    else:
+        print("test cases failed for steps to 0")
+    
