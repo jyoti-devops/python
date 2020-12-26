@@ -53,6 +53,7 @@ def number_of_steps_to_reduce_number_o(input_num):
         counter = counter+ 1
     print(counter)
     return counter
+
 if __name__ == '__main__':
     #test cases for power 10
     TEST1 = is_power_of_10(100)
