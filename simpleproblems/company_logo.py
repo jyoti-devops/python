@@ -10,8 +10,8 @@ A single line of input containing the string .
 Constraints
 
 Output Format
-Print the three most common characters along with their occurrence count each on a separate line. 
-Sort output in descending order of occurrence count. 
+Print the three most common characters along with their occurrence count each on a separate line.
+Sort output in descending order of occurrence count.
 If the occurrence count is the same, sort the characters in alphabetical order.
 Sample Input 0
 aabbbccde
@@ -27,17 +27,13 @@ Both a and c occur  times. So, a is printed in the sorted order
 
 #!/bin/python3
 
-import math
-import os
-import random
-import re
-import sys
 from collections import Counter
 
 
 if __name__ == '__main__':
     s = input()
     chars = Counter(s).items()
-    
-for char ,n in sorted(chars, key = lambda c: (-c[1], c[0]))[:3]:
-    print(char,n)
+    print(chars)
+
+for char, n in sorted(chars, key=lambda c: (-c[1], c[0]))[:3]:
+    print(char, n)
